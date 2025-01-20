@@ -5,7 +5,7 @@
 // Function to play the game
 void game() {
   int plyr, cmptr, plyrScr = 0, cmptrScr = 0, rnds = 0;
-  char choices[4][10] = {"rock", "paper", "scissor", "quit"};
+  const char choices[4][10] = {"rock", "paper", "scissor", "quit"};
 
   // Clear the screen
   system("cls");
