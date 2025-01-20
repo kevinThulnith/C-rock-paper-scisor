@@ -52,6 +52,7 @@ void game() {
   // TODO: Clear the screen and display final scores
   system("cls");
   printf(" Number of Rounds : %i \n Player Score : %i \n Computer Score : %i \n", rnds, plyrScr, cmptrScr);
+  
   if (plyrScr == cmptrScr) printf(" Tie Game !!!");
   else if (plyrScr > cmptrScr) printf(" Player Wins!!!");
   else printf(" Computer Wins!!!");
