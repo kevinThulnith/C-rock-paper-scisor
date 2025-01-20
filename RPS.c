@@ -4,26 +4,23 @@
 
 // Function to play the game
 void game() {
-  int plyr, cmptr, plyrScr, cmptrScr, rnds;
+  int plyr, cmptr, plyrScr = 0, cmptrScr = 0, rnds = 0;
   char choices[4][10] = {"rock", "paper", "scissor", "quit"};
 
   // Clear the screen
   system("cls");
   printf("\n---------- Rock Paper Scissor ---------- \n\n");
-  printf(" Numbers and Choices \n\n   1. Rock\n   2. Paper\n   3. Scissor\n   4. Qiut \n");
+  printf(" Numbers and Choices \n\n   1. Rock\n   2. Paper\n   3. Scissor\n   4. Qiut\n");
 
   // Seed the random number generator with the current time
   srand(time(NULL));
-  plyrScr = 0;
-  cmptrScr = 0;
-  rnds = 0;
 
   // Main game loop
   while (1) {
     printf("\n Choose your move : ");
     scanf("%i", &plyr);
 
-    // Check for invalid choice
+    // !Check for invalid choice
     if (plyr > 4 || plyr < 1) {
       printf("\n Invalide Choice !!");
       continue;
@@ -42,7 +39,7 @@ void game() {
     // Determine the round winner
     if(plyr == cmptr) {
       printf("\n Tie Round !!! \n");
-    } else if((plyr == 0 && cmptr == 2) || (plyr == 1 && cmptr == 0) || (plyr == 2 && cmptr == 2)) {
+    } else if((plyr == 0 && cmptr == 2) || (plyr == 1 && cmptr == 0) || (plyr == 2 && cmptr == 1)) {
       printf("\n You Win !!! \n");
       plyrScr += 1;
     } else {
@@ -54,19 +51,18 @@ void game() {
 
   // TODO: Clear the screen and display final scores
   system("cls");
-  printf(" Number of Rounds : %i \n Player Score : %i \n Computer Score : %i \n", rnds, plyr, cmptr);
-  if (plyr == cmptr) printf(" Tie Game !!!");
-  else if (plyr > cmptr) printf(" Player Wins!!!");
-  else (" Computer Wins!!!");
+  printf(" Number of Rounds : %i \n Player Score : %i \n Computer Score : %i \n", rnds, plyrScr, cmptrScr);
+  if (plyrScr == cmptrScr) printf(" Tie Game !!!");
+  else if (plyrScr > cmptrScr) printf(" Player Wins!!!");
+  else printf(" Computer Wins!!!");
 }
 
 int main() {
   // Variables
   int rnds = 0;
-  char playrnme[30];
-  char nm;
+  char playrnme[30], nm;
 
-  // Get plater name
+  // Get player name
   printf("Enter Name : ");
   scanf("%s", playrnme);
   system("cls");
@@ -94,4 +90,3 @@ int main() {
   printf(" Bye %s !\n", playrnme);
   return 0;
 };
-
