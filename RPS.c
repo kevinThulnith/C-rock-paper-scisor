@@ -60,7 +60,6 @@ void game() {
 
 int main() {
   // Variables
-  int rnds = 0;
   char playrnme[30], nm;
 
   // Get player name
@@ -68,24 +67,20 @@ int main() {
   scanf("%s", playrnme);
   system("cls");
 
-  // Main loop to play multiple games
+  printf("Press enter to continue...");
+  getchar();
+  getchar();
+  game();
+
   while (1) {
-    if (rnds == 0) {
-      printf("Press enter to continue...");
-      getchar();
-      getchar();
-      rnds += 1;
+    printf("\n\n Want to play again (y /n)? ");
+    scanf(" %c", &nm);
+    if (nm == 'n' || nm == 'N') {
+      break;
+    } else if (nm == 'y' || nm == 'Y') {
       game();
     } else {
-      printf("\n\n Want to play again (y /n)? ");
-      scanf(" %c", &nm);
-      if (nm == 'n' || nm == 'N') {
-        break;
-      } else if (nm == 'y' || nm == 'Y') {
-        game();
-      } else {
-        printf("Invalid input. Please enter 'y' or 'n'.\n");
-      }
+      printf("Invalid input. Please enter 'y' or 'n'.\n");
     }
   }
   printf(" Bye %s !\n", playrnme);
