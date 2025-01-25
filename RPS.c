@@ -5,7 +5,7 @@
 // Function to play the game
 void game() {
   int plyr, cmptr, plyrScr = 0, cmptrScr = 0, rnds = 0;
-  const char choices[4][10] = {"rock", "paper", "scissor", "quit"};
+  char choices[4][10] = {"rock", "paper", "scissor", "quit"};
 
   // Clear the screen
   system("cls");
@@ -52,7 +52,6 @@ void game() {
   // TODO: Clear the screen and display final scores
   system("cls");
   printf(" Number of Rounds : %i \n Player Score : %i \n Computer Score : %i \n", rnds, plyrScr, cmptrScr);
-  
   if (plyrScr == cmptrScr) printf(" Tie Game !!!");
   else if (plyrScr > cmptrScr) printf(" Player Wins!!!");
   else printf(" Computer Wins!!!");
@@ -60,6 +59,7 @@ void game() {
 
 int main() {
   // Variables
+  int rnds = 0;
   char playrnme[30], nm;
 
   // Get player name
@@ -67,20 +67,24 @@ int main() {
   scanf("%s", playrnme);
   system("cls");
 
-  printf("Press enter to continue...");
-  getchar();
-  getchar();
-  game();
-
+  // Main loop to play multiple games
   while (1) {
-    printf("\n\n Want to play again (y /n)? ");
-    scanf(" %c", &nm);
-    if (nm == 'n' || nm == 'N') {
-      break;
-    } else if (nm == 'y' || nm == 'Y') {
+    if (rnds == 0) {
+      printf("Press enter to continue...");
+      getchar();
+      getchar();
+      rnds += 1;
       game();
     } else {
-      printf("Invalid input. Please enter 'y' or 'n'.\n");
+      printf("\n\n Want to play again (y /n)? ");
+      scanf(" %c", &nm);
+      if (nm == 'n' || nm == 'N') {
+        break;
+      } else if (nm == 'y' || nm == 'Y') {
+        game();
+      } else {
+        printf("Invalid input. Please enter 'y' or 'n'.\n");
+      }
     }
   }
   printf(" Bye %s !\n", playrnme);
