@@ -1,31 +1,34 @@
-# C-rock-paper-scissor
+# 🎮 C-Rock-Paper-Scissors ✊📄✂️
 
-This is a simple implementation of the Rock-Paper-Scissors game in C.
+A simple yet fun Rock-Paper-Scissors game written in C! 🖥️🚀
 
-## How to Play
+## 🎲 How to Play
 
-1. Run the executable `RPS.exe`.
-2. Enter your name when prompted.
-3. Choose your move by entering the corresponding number:
-   - 1 for Rock
-   - 2 for Paper
-   - 3 for Scissors
-   - 4 to Quit the game
-4. The computer will randomly choose its move.
-5. The result of the round will be displayed.
-6. You can choose to play another round or quit the game.
+1️⃣ Run the executable: `RPS.exe`  
+2️⃣ Enter your name when prompted. 📝
+3️⃣ Choose your move by entering the corresponding number:
 
-## Game Rules
+- ✊ 1 for Rock
+- 📄 2 for Paper
+- ✂️ 3 for Scissors
+- ❌ 4 to Quit the game
+  4️⃣ The computer will randomly pick its move. 🤖
+  5️⃣ The result of the round will be displayed. 🎉
+  6️⃣ You can choose to play another round or exit. 🔁
 
-- Rock beats Scissors
-- Scissors beats Paper
-- Paper beats Rock
-- If both players choose the same move, the round is a tie.
+## 🏆 Game Rules
 
-## Compilation
+- ✊ Rock beats ✂️ Scissors
+- ✂️ Scissors beats 📄 Paper
+- 📄 Paper beats ✊ Rock
+- If both players choose the same move, it's a tie! 🤝
 
-To compile the code, use the following command:
+## ⚙️ Compilation
 
-```sh
+To compile the game, use the following command: 🛠️
+
+```bash
 gcc -o RPS RPS.c
 ```
+
+Now you're all set to play! Have fun! 🎮😁
