@@ -27,8 +27,38 @@ A simple yet fun Rock-Paper-Scissors game written in C! 🖥️🚀
 
 To compile the game, use the following command: 🛠️
 
-```bash
+```sh
 gcc -o RPS RPS.c
 ```
+
+## 💡 Features
+
+- Simple and lightweight game written in C. ⚡
+- Interactive user input with name entry. 📝
+- Randomized computer opponent for unpredictable gameplay. 🎲
+- Instant results after each round. 🏅
+- Option to play multiple rounds or exit anytime. 🔁
+
+## 📌 Future Enhancements
+
+We plan to make the game even more exciting with the following features:
+
+- 🔊 Sound effects for a more immersive experience.
+- 🎨 Improved UI with ASCII graphics.
+- 📊 A scoreboard to keep track of wins and losses.
+- 🤖 AI difficulty levels to challenge different skill levels.
+
+## 🤝 Contributing
+
+We welcome contributions to make this game even better! If you'd like to contribute:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Commit your changes with clear messages.
+4. Push the changes and create a pull request.
+
+## 📜 License
+
+This project is licensed under the MIT License. Feel free to use and modify it as you like! 🚀
 
 Now you're all set to play! Have fun! 🎮😁
