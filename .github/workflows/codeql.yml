@@ -39,7 +39,7 @@ jobs:
 
       - name: Build C Code # ⬅️ Add manual build steps
         run: |
-          gcc -o my_program main.c  # Replace "main.c" with your actual C source file
+          gcc -o my_program RPS.c  # Replace "main.c" with your actual C source file
           echo "Build completed successfully."
 
       - name: Perform CodeQL Analysis
